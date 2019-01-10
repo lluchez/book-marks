@@ -1,0 +1,33 @@
+<div class="container">
+
+	<h1>Book notes</h1>
+	<div class="input-group">
+		<span class="input-group-addon"><i class="glyphicon glyphicon-search"></i> Search</span>
+		<input class="form-control ng-pristine ng-untouched ng-valid" ng-model="filterText">
+		<div class="input-group-btn">
+			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<span class="glyphicon glyphicon-sort"></span>
+				<span class="hidden-xs">Sort</span>
+				<span class="caret"></span>
+			</button>
+			<ul class="dropdown-menu dropdown-menu-right">
+				<li ng-repeat="sortOpt in sort.options">
+					<a href="" ng-class="cssSortOption(sortOpt)" ng-click="sortOptionClicked($event, sortOpt)">{{ sortOpt.text }}</span></a>
+				</li>
+			</ul>
+		</div>
+		<span class="input-group-btn">
+			<button class="btn btn-default" ng-click="goToCreateBook($event)"><i class="glyphicon glyphicon-plus"></i> Add</button>
+		</span>
+	</div>
+	<div class="list-group">
+		<a ng-href="{{ href(item) }}" class="list-group-item" ng-repeat="item in data.filtered = (data.items | bookNotesFilter:filterText:sort.selected)" ng-click="handlers.selectItemClicked(item)">
+			<span ng-bind="item.bookName"></span>
+			<span ng-bind="item.notes.length" class="badge" title="This book has {{ item.notes.length }} notes"></span>
+		</a>
+		<div ng-show="data.filtered.length == 0">
+			<a class="list-group-item"><i>No item to display</i></a>
+		</div>
+	</div>
+
+</div>

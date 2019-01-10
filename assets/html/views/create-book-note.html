@@ -1,0 +1,36 @@
+<div class="container">
+	
+	<h1>Adding annotation <span class="h2" ng-show="!!data">to <span ng-bind="data.bookName"></span></span></h1>
+	
+	<div id="alert-panel" class="container" style="display: none">
+		<div class="alert alert-box ease in" role="alert">
+			<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+			<span class="alert-header"></span>
+			<br />
+			<span class="alert-message"></span>
+			<span class="alert-status"></span>
+		</div>
+	</div>
+
+	<form class="form-horizontal" role="form" ng-submit="newNoteFormSubmitted($event)">
+		<div class="form-group"><!-- Marker -->
+			<label class="control-label col-sm-2">Marker:</label>
+			<div class="col-sm-10">
+				<input type="text" class="form-control" ng-model="newItem.marker" placeholder="Marker (e.g line number)" />
+			</div>
+		</div>
+		<div class="form-group"><!-- Annotation -->
+			<label class="control-label col-sm-2">Annotation:</label>
+			<div class="col-sm-10">
+				<textarea class="form-control" ng-model="newItem.text" placeholder="Annotation" rows="6"></textarea>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-sm-12 controls">
+				<button type="submit" class="btn btn-primary pull-right"><i class="glyphicon glyphicon-ok-circle"></i> Create</button>
+				<a class="btn btn-link pull-right" ng-click="cancelNewItemCreationClicked()"><i class="glyphicon glyphicon-remove-circle"></i> Cancel</a>
+			</div>
+		</div>
+	</form>
+
+</div>

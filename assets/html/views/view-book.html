@@ -1,0 +1,41 @@
+
+<div id="alert-panel" class="container" style="display: none">
+	<div class="alert alert-box ease in" role="alert">
+		<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+		<span class="alert-header"></span>
+		<br />
+		<span class="alert-message"></span>
+		<span class="alert-status"></span>
+	</div>
+</div>
+
+<div class="container book-notes-info" ng-show="bookExists">
+	<h1 role="title">
+		<span class="book-title" ng-bind="data.bookName"></span>
+		<span class="author h2" ng-bind="data.author"></span>
+	</h1>
+	<table class="table table-hover table-bordered table-responsive">
+		<thead>
+			<tr>
+				<th class="marker">Marker</th>
+				<th class="note">Annotation</th>
+				<th class="actions">Actions</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="note in data.notes">
+				<td class="marker" ng-bind="note.marker"></td>
+				<td class="note" ng-bind="note.text"></td>
+				<td class="actions">
+					<button class="btn btn-danger"><i class="glyphicon glyphicon-trash"></i> <span class="hidden-xs">Delete</span></button>
+				</td>
+			</td>
+		</tbody>
+	</table>
+	<div class="controls">
+		<button class="btn btn-primary pull-right" ng-click="goToCreateBookNoteClicked(event)"><i class="glyphicon glyphicon-plus"></i> Add note</button>
+		<button class="btn btn-danger pull-right" ng-click="removeItemClicked($event)"><i class="glyphicon glyphicon-remove-circle"></i> Remove</button>
+		<a ng-click="goToBooksClicked($event)" class="btn btn-link pull-right"><i class="glyphicon glyphicon-arrow-left"></i> Back to books</a>
+	</div>
+</div>
+

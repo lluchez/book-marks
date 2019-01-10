@@ -1,0 +1,118 @@
+
+/* Main Styles */
+html { min-height: 100%; position: relative; margin: 0; font-size: 62.5%; }
+body { margin: 0; margin-bottom: 68px; font-size: 14px; font-size: 1.4rem; }
+.no-wrap { white-space: nowrap; }
+a, h1, h2, h3, .h1, .h2, .h3, .color, .navbar .navbar-brand, .navbar-nav > li a { color: #43853D; }
+h1, .h1 { font-size: 26px; font-size: 2.6rem; border-bottom: 1px solid #43853D; padding-bottom: 3px; margin-left: 10px; margin-right: 10px; }
+h2, .h2 { font-size: 21px; font-size: 2.1rem; }
+h3, .h3 { font-size: 17px; font-size: 1.7rem; }
+h2, h3 { padding-left: 5px; }
+a { cursor: pointer; }
+a:visited { text-decoration: none; }
+a:hover { color: #026E00; transition: color 0.5s; }
+.clear:after { content: " "; display: block; clear: both; }
+.table thead { background-color: #43853D; color: white; }
+.alert a { color: #333; }
+.alert-box { margin-top: 30px; margin-bottom: 30px; }
+.alert .alert-header { font-weight: bold; }
+.alert .alert-status { font-style: italic; }
+.pull-right { margin-left: 3px; }
+/* .dropdown-toggle > .glyphicon:first-child { padding-right: 3px; } */
+.block { padding: 0 10px 5px; }
+.text-block { padding: 0 10px; text-align: justify; }
+
+/* Radio/Checkbox icons */
+.radio-selected, .radio-selected:hover, .radio-not-selected, .radio-not-selected:hover,
+	.checkbox-selected, .checkbox-selected:hover, .checkbox-not-selected, .checkbox-not-selected:hover {
+	background-position: 2px center; background-repeat: no-repeat; }
+.radio-selected, .radio-selected:hover { background-image: url('../images/controls/radio-selected-16x16.png'); }
+.radio-not-selected, .radio-not-selected:hover { background-image: url('../images/controls/radio-not-selected-16x16.png'); }
+.checkbox-selected, .checkbox-selected:hover { background-image: url('../images/controls/checkbox-selected-16x16.png'); }
+.checkbox-not-selected, .checkbox-not-selected:hover { background-image: url('../images/controls/checkbox-not-selected-16x16.png'); }
+
+
+/* Grid/Table Styles */
+thead th, tfoot td.controls, td.actions-cell  { text-align: center; }
+
+
+
+/* Navigation bar Styles */
+.navbar { margin-bottom: 0; background: white url('../images/dark-clouds_1920x180.jpg') no-repeat center; background-size: cover; border: 0; }
+.navbar .navbar-brand { font-size: 2.75rem; font-weight: bold; text-shadow: 2px 1px #333; color: #43853D; }
+.navbar .navbar-brand span { display: inline-block; margin-left: -5px; line-height: 56px; vertical-align: middle; }
+.navbar .navbar-brand .navbar-logo { margin-left: 0; color: #c0e9bc; font-weight: bold; }
+.navbar .navbar-brand .navbar-text { margin: 0 0 0 5px; }
+.navbar-nav > li a:hover, .navbar-nav > li a:focus { color: #333; background-color: rgba(255,255,255,0.3); }
+.navbar-nav > .active > a:before, .navbar-nav > li > a:before { content: ""; display: inline-block; height: 32px; vertical-align: middle; }
+.navbar-nav .with-icon:before { width: 32px; margin-right: 5px; background: url('../images/empty.png') no-repeat 0 top; }
+.navbar-nav .icon-book-notes:before { background-image: url('../images/icons/book-notes-32x32.png'); }
+.navbar-nav .icon-todo-lists:before { background-image: url('../images/icons/todo-lists-32x32.png'); }
+.navbar-nav .dropdown-menu a:before { content: ""; display: inline-block; height: 16px; vertical-align: middle; }
+
+
+/* Footer Styles */
+.footer { position: absolute; bottom: 0; width: 100%; padding: 10px; text-align: center; letter-spacing: 2px; color: white;
+	box-shadow: inset 0 2px 3px #888; background-color: #333; background: linear-gradient(to bottom, #333, #444); }
+.footer img { height: 32px; margin-left: 5px; }
+
+
+/* Loading Panel Styles */
+.loading-panel { position: fixed; top: 0; bottom: 0; left: 0; right: 0; z-index: 100;
+	background: #EEE url('../images/loading_200x200.gif') no-repeat center; opacity: 0.7; }
+
+
+/* Book-notes Styles */
+.book-notes-info h1 .author { font-size: 21px; font-size: 2.1rem; font-style: italic; }
+.book-notes-info th.note, .book-notes-info td.note { width: 100%; }
+.book-notes-info td.marker, .book-notes-info td.actions { text-align: center; }
+
+
+/* Styles for smart-phones and tablets */
+@media (max-width: 767px)
+{
+	h1 { border-bottom-width: 2px; }
+	.sm-centered { text-align: center; }
+	.container-fluid { padding: 0; }
+	.container > .navbar-header, .container-fluid > .navbar-header, .container > .navbar-collapse, .container-fluid > .navbar-collapse { margin: 0; }
+	.navbar .navbar-brand { padding-left: 8px; padding-right: 0; margin-top: -15px; }
+	.navbar .navbar-toggle { margin-right: 5px; }
+	.nav a { font-size: 2.0rem; }
+	.nav > li a { color: white; }
+	.nav .open > a, .nav .open > a:hover, .nav .open > a:focus { background: none; }
+	.navbar-nav > li a { padding-left: 30px; }
+	.navbar-nav .open .dropdown-menu > li > a { padding-left: 50px; height: 32px; }
+	.navbar-collapse { background-color: rgba(255,255,255,0.3); }
+	.dropdown-menu .divider { background-color: white; margin-left: 50px; margin-right: 50px; opacity: 0.5; }
+	.navbar-toggle .icon-bar { background-color: #43853D; height: 4px; }
+
+	.footer .footer-item:not(:first-child):before { content: " "; display: block; margin: 15px; height: 2px; background-color: #843547; background: linear-gradient(to right, #6A3441, #843547, #6A3441); }
+	
+	h1 .h2:before { content: " "; display: block; }
+}
+
+
+/* Styles for larger screens (computers) */
+@media (min-width: 768px)
+{
+	/* h1 { text-align: center; } */
+	.container-fluid { width: 100%; }
+	.navbar { border-radius: 0; box-shadow: 2px 2px 3px #888; }
+	.navbar .navbar-brand { padding-top: 7px; }
+	.navbar .navbar-brand .navbar-text { float: none; }
+	.navbar-right { padding-top: 3px; padding-bottom: 3px; }
+	.navbar-nav > li a { cursor: pointer; }
+	.navbar-nav > li > a { font-weight: bold; }
+	.navbar-nav > li > a:hover { color: white; }
+	.nav .open > a, .nav .open > a, .nav .open > a, .nav .open > a:hover, .nav .open > a:focus { background-color: #026E00; color: white; }
+	
+	.content-holder { padding: 5px; }
+
+	.footer { position: absolute; bottom: 0; width: 100%; letter-spacing: 2px; }
+	.footer img { position: relative; height: 48px; opacity: .75; transition: all .4s ease; padding: 3px; }
+	.footer img:hover { opacity: 1; padding: 0; }
+	
+	.book-notes-info h1 .author:before { content: " by "; }
+}
+
+

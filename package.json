@@ -1,0 +1,22 @@
+{
+  "name": "texts",
+  "version": "0.1.0",
+  "description": "Web-sote to strore texts (todo lists and memos)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+		"prod": "NODE_ENV=prod node index.js",
+		"dev": "NODE_ENV=dev nodemon index.js"
+  },
+  "author": "Lionel Luchez",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "mongodb": "^2.2.10",
+    "q": "^1.4.1",
+    "socket.io": "^1.4.8",
+    "underscore": "^1.8.3"
+  },
+  "private": true
+}

@@ -1,0 +1,50 @@
+<div class="container">
+
+	<h1>Creating new Web site</h1>
+	<div id="alert-panel" class="container" style="display: none">
+		<div class="alert alert-box ease in" role="alert">
+			<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+			<span class="alert-header"></span>
+			<br />
+			<span class="alert-message"></span>
+			<span class="alert-status"></span>
+		</div>
+	</div>
+	<form class="form-horizontal" role="form" ng-submit="newItemFormSubmitted($event)">
+		<div class="form-group"><!-- Book Name -->
+			<label class="control-label col-sm-2">Book Name:</label>
+			<div class="col-sm-10">
+				<input type="text" class="form-control" ng-model="newItem.bookName" placeholder="Book Name" />
+			</div>
+		</div>
+		<div class="form-group"><!-- Email -->
+			<label class="control-label col-sm-2">Author:</label>
+			<div class="col-sm-10">
+				<input type="text" class="form-control" ng-model="newItem.author" placeholder="Author" />
+			</div>
+		</div>
+		<div class="form-group"><!-- Tags -->
+			<label class="control-label col-sm-2">Tags:</label>
+			<div class="col-sm-10">
+				<input type="text" class="form-control" ng-model="newItem.tags" placeholder="Tags" />
+			</div>
+		</div>
+		<div class="form-group"><!-- Privacy -->
+			<label class="control-label col-sm-2">Privacy:</label>
+			<div class="col-sm-10">
+				<select class="form-control" ng-model="newItem.privacy">
+					<option class="-label-success" value="private">Private (can be viewed and edited only by you)</option>
+					<option class="-label-warning" value="shared_view_only">Shared as View-Only (visible by everyone, but only editable by you)</option>
+					<option class="-label-danger" value="public">Public (visible and editable by everyone)</option>
+				</select>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-sm-12 controls">
+				<button type="submit" class="btn btn-primary pull-right"><i class="glyphicon glyphicon-ok-circle"></i> Create</button>
+				<a ng-click="goToBooksClicked($event)" class="btn btn-link pull-right"><i class="glyphicon glyphicon-remove-circle"></i> Cancel</a>
+			</div>
+		</div>
+	</form>
+
+</div>
